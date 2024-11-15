@@ -259,7 +259,7 @@ if __name__ == "__main__":
 
     try:
         loop.run_until_complete(server.setup())
-        loop.run_until_complete(run(server, address=args.listen, port=args.port, verbose=not args.dont_print_server, call_on_start=call_on_start))
+        loop.run_until_complete(run(server, address="0.0.0.0", port=8188, verbose=True, call_on_start=call_on_start))
     except KeyboardInterrupt:
         logging.info("\nStopped server")
 
